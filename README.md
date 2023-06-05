@@ -27,7 +27,7 @@ Each date range is a range of consecutive days converted by the input parameter 
 >**Expect**, dateRanges = 2022-01-01_2022-01-03,2022-01-10_2022-01-10
 
 ## Goals
-Building this out enabled me to figure out how to do the following in Clojure:
+Building this out gave me the opportunity to figure out how to do the following in Clojure:
 - Create an HTTP endpoint which would receive a POST request and return a response.
   - I began this journey with by putting together a ["Hello World" endpoint in Clojure](https://github.com/nathanchilton/hello-world-donkey) using the [Donkey](https://github.com/AppsFlyer/donkey) framework, which I see is now "no longer maintained".
 - Split a String of comma-separated values into an array/list
