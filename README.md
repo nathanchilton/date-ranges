@@ -3,7 +3,7 @@
 A simple HTTP endpoint that returns ranges of consecutive days for a list of dates.
 
 ## Background
-I developed this mostly because I was looking to learn a bit of the Clojure language and I needed a little project.  During an interview, a coworker (and old friend) proposed a theoretical HTTP endpoint with certain behavior, so we could evaluate a candidate's approach to testing.
+I developed this mostly because I was looking to learn a bit of the Clojure language and I needed a little project.  During an interview, a coworker (and old friend, @derekgoering) proposed a theoretical HTTP endpoint with certain behavior, so we could evaluate a candidate's approach to testing.
 
 I decided that this exercise seemed like a good opportunity for building something simple, in order to challenge myself to learn a few things.
 
