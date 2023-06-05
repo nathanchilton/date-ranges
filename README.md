@@ -3,7 +3,7 @@
 A simple HTTP endpoint that returns ranges of consecutive days for a list of dates.
 
 ## Background
-I developed this mostly because I was looking to learn a bit of the Clojure language and I needed a little project.  During an interview, a coworker (and old friend, [@derekgoering](https://github.com/derekgoering)) proposed a theoretical HTTP endpoint with certain behavior, so we could evaluate a candidate's approach to testing.
+I developed this mostly because I was looking to learn a bit of the [Clojure](https://clojure.org/) language and I needed a little project.  During an interview, a coworker (and old friend, [@derekgoering](https://github.com/derekgoering)) proposed a theoretical HTTP endpoint with certain behavior, so we could evaluate a candidate's approach to testing.
 
 I decided that this exercise seemed like a good opportunity for building something simple, in order to challenge myself to learn a few things.
 
@@ -31,7 +31,7 @@ Building this out enabled me to figure out how to do the following in Clojure:
 - Create an HTTP endpoint which would receive a POST request and return a response.
   - I began this journey with by putting together a ["Hello World" endpoint in Clojure](https://github.com/nathanchilton/hello-world-donkey) using the [Donkey](https://github.com/AppsFlyer/donkey) framework, which I see is now "no longer maintained".
 - Split a String of comma-separated values into an array/list
-- Parse a JSON-formatted string and returns a Clojure data structure
+- Parse a JSON-formatted string and returns a Clojure data structure (my version can also accept and return the data in JSON format)
 - Generate a JSON-formatted string from a Clojure data structure
 - Compare a string to a regex to see if it matches the expected date format
 - Divide a list of date strings into collections of valid and invalid dates (depending upon whether they match a regular expression)
