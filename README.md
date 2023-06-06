@@ -29,7 +29,7 @@ Each date range is a range of consecutive days converted by the input parameter 
 ## Goals
 Building this out gave me the opportunity to figure out how to do the following in Clojure:
 - Create an HTTP endpoint which would receive a POST request and return a response.
-  - I began this journey with by putting together a ["Hello World" endpoint in Clojure](https://github.com/nathanchilton/hello-world-donkey) using the [Donkey](https://github.com/AppsFlyer/donkey) framework, which I see is now "no longer maintained".
+  - I began this journey with by putting together a ["Hello World" endpoint in Clojure](https://github.com/nathanchilton/hello-world-donkey) using the [Donkey](https://github.com/AppsFlyer/donkey) framework, which (as of 5 MAR 2023) is ["no longer maintained"](https://github.com/AppsFlyer/donkey/commit/e36889e3b18da17d151c6a70673653ea4d24c045) -- but that doesn't mean it has stopped working.
 - Split a String of comma-separated values into an array/list
 - Parse a JSON-formatted string and returns a Clojure data structure (my version can also accept and return the data in JSON format)
 - Generate a JSON-formatted string from a Clojure data structure
