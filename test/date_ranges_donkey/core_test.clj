@@ -1,13 +1,30 @@
 (ns date-ranges-donkey.core-test
   (:require [clojure.test :refer :all]
-            [date-ranges-donkey.core :refer :all]))
+            [date-ranges-donkey.core :refer :all]
+            [clojure.data.json :as json]))
 
 (def expected-result-happy-path {:status 200 :body "2022-01-01_2022-01-03,2022-01-10_2022-01-10"})
+
+(def expected-result-happy-path-json
+  {:status 200
+   :body (json/write-str
+          {:ranges
+           [{:begin "2022-01-01" :end "2022-01-03"}
+            {:begin "2022-01-10" :end "2022-01-10"}]})})
 
 (deftest happy-path
   (testing "happy-path (Derek's original user story)"
     (is (= (generate-date-ranges {:body "2022-01-01,2022-01-02,2022-01-03,2022-01-10"  :headers {"content-type" "application/text"}})
            expected-result-happy-path))))
+
+(deftest happy-path
+  (testing "happy-path (in JSON format)"
+    (let [request-body (json/write-str ["2022-01-01" "2022-01-02" "2022-01-03" "2022-01-10"])
+        request-headers {"content-type" "application/json"}
+        actual-response (generate-date-ranges {:body request-body :headers request-headers})
+        expected-body (json/read-str (:body expected-result-happy-path-json) )]
+    (is (= (-> actual-response :status) (:status expected-result-happy-path-json)))
+    (is (= (-> actual-response :body json/read-str ) expected-body)))))
 
 (deftest happy-path-out-of-order
   (testing "happy-path with dates out of order"

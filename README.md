@@ -26,6 +26,37 @@ Each date range is a range of consecutive days converted by the input parameter 
 >
 >**Expect**, dateRanges = 2022-01-01_2022-01-03,2022-01-10_2022-01-10
 
+### JSON Support
+
+If the API receives the request in JSON format, it will also respond with JSON.
+
+**Request:**
+``` JSON
+[
+  "2022-01-01",
+  "2022-01-02",
+  "2022-01-03",
+  "2022-01-10"
+]
+```
+
+**Response:**
+
+``` JSON
+{
+  "ranges": [
+    {
+      "begin": "2022-01-01",
+      "end": "2022-01-03"
+    },
+    {
+      "begin": "2022-01-10",
+      "end": "2022-01-10"
+    }
+  ]
+}
+```
+
 ## Goals
 Building this out gave me the opportunity to figure out how to do the following in Clojure:
 - Create an HTTP endpoint which would receive a POST request and return a response.

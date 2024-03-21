@@ -7,6 +7,7 @@
                  [com.appsflyer/donkey "0.5.2"]
                  [clojure.java-time "1.1.0"]
                  [cheshire "5.11.0"]
+                 [org.clojure/data.json "1.0.0"]
                  ]
   :plugins [[cider/cider-nrepl "0.28.5"]]
   :repl-options {:init-ns date-ranges-donkey.core})
